@@ -2,33 +2,33 @@ package com.javastring;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class VowelConsonantTest {
+public class StringVowelConsonantTest {
     /**
      * This is junit test cases for validating VowelConsonant class using different scenarios
      */
-    VowelConsonant vowelConsonant = new VowelConsonant();
+    StringVowelConsonant stringVowelConsonant = new StringVowelConsonant();
 
     @Test
     public void countNumberOfVowelsAndConsonantInGivenString() {
         int[] expectedCount = new int[]{3, 4};
-        int[] actualCount = vowelConsonant.countVowelAndConsonant("surabhi");
+        int[] actualCount = stringVowelConsonant.countVowelAndConsonant("surabhi");
         Assert.assertArrayEquals(expectedCount, actualCount);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void countNumberOfVowelAndConsonantIfNullValueProvided() {
-        vowelConsonant.countVowelAndConsonant(null);
+        stringVowelConsonant.countVowelAndConsonant(null);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void countNumberOfVowelsAndConsonantIfEmptyValueProvided() {
-        vowelConsonant.countVowelAndConsonant("");
+        stringVowelConsonant.countVowelAndConsonant("");
     }
 
     @Test
     public void countVowelsIfSpecialCharacterProvided() {
         int[] expectedCount = new int[]{0, 0};
-        int[] totalCount = vowelConsonant.countVowelAndConsonant("@!#$%&");
+        int[] totalCount = stringVowelConsonant.countVowelAndConsonant("@!#$%&");
         Assert.assertEquals(expectedCount, totalCount);
     }
 }

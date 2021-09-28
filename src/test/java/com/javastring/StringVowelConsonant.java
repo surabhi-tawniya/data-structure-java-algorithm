@@ -2,14 +2,14 @@ package com.javastring;
 import java.util.Arrays;
 import java.util.List;
 
-public class VowelConsonant {
+public class StringVowelConsonant {
     /**
      * This is a program for counting the number of vowels and consonants from a string.
      */
     public static void main(String args[]) {
-        VowelConsonant vowelConsonant = new VowelConsonant();
+        StringVowelConsonant stringVowelConsonant = new StringVowelConsonant();
 
-        vowelConsonant.countVowelAndConsonant("surabhi");
+        stringVowelConsonant.countVowelAndConsonant("surabhi");
     }
     /**
      * This method is iterating through the string and checking if there are any vowels
