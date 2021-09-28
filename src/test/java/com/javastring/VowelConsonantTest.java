@@ -1,23 +1,16 @@
 package com.javastring;
-
-import junit.framework.TestCase;
 import org.junit.Assert;
-import org.junit.Assert.*;
-import org.junit.Ignore;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
-
 public class VowelConsonantTest {
-
+    /**
+     * This is junit test cases for validating VowelConsonant class using different scenarios
+     */
     VowelConsonant vowelConsonant = new VowelConsonant();
 
     @Test
     public void countNumberOfVowelsAndConsonantInGivenString() {
-        int[] expectedCount = new int[] {3 , 4};
+        int[] expectedCount = new int[]{3, 4};
         int[] actualCount = vowelConsonant.countVowelAndConsonant("surabhi");
         Assert.assertArrayEquals(expectedCount, actualCount);
     }
@@ -33,10 +26,9 @@ public class VowelConsonantTest {
     }
 
     @Test
-    @Ignore
     public void countVowelsIfSpecialCharacterProvided() {
+        int[] expectedCount = new int[]{0, 0};
         int[] totalCount = vowelConsonant.countVowelAndConsonant("@!#$%&");
-        Assert.assertEquals(0, totalCount);
-
+        Assert.assertEquals(expectedCount, totalCount);
     }
 }
